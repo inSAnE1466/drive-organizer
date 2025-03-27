@@ -1,6 +1,19 @@
 # Drive Organizer
 
-A Python application to automatically organize your cloud storage images using AI-powered image recognition.
+A Python application to automatically organize your cloud storage images using AI-powered image recognition. Built with a React Vite frontend and a redis DB for data visualization + ease of use.
+
+This started as a CRUD app with llm API calls and manual tool calls, but that is only because the original setup existed before LLMs had tool calls built into their libraries. I am going to build out an agentic flow with the api calls so as to build context for the image recognition as ensure that tool calls are as efficient as possible.
+
+Orchestrator-worker flows work well for a task like this, as we are performing tasks asynchronously.
+
+
+
+## Tech Stack
+
+- Redis implementation to tag images and organize/visualize data (hashing for metadata)
+- Gemini/PydanticAI for LLM and tool calls
+- React Vite + ShadCN for frontend 
+- Python FastAPI for backend 
 
 ## Features
 
@@ -15,12 +28,6 @@ A Python application to automatically organize your cloud storage images using A
 
 Managing the ever-growing collection of digital images has become increasingly challenging. This tool leverages the power of AI to automatically categorize and organize images based on their content, making it easier to find and manage your photo collection.
 
-## Technology Stack
-
-- **Backend**: Python 3.9+
-- **Image Recognition**: Google Gemini API or AWS Rekognition
-- **Cloud Storage**: Google Drive API (expandable to other platforms)
-- **Interface**: Command-line with optional web interface
 
 ## Installation
 
