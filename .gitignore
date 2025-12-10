@@ -5,6 +5,9 @@ __pycache__/
 *.so
 .Python
 env/
+.venv/
+venv/
+ENV/
 build/
 develop-eggs/
 dist/
@@ -22,7 +25,11 @@ var/
 .pytest_cache/
 .coverage
 htmlcov/
+coverage/
+.nyc_output/
 .mypy_cache/
+.ruff_cache/
+.hypothesis/
 
 # Node.js
 node_modules/
@@ -33,6 +40,12 @@ yarn-error.log*
 dist/
 dist-ssr/
 *.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Frontend caching
+.eslintcache
 
 # Environment variables
 .env
@@ -65,3 +78,6 @@ service-account-*.json
 
 
 CLAUDE_INSTRUCTIONS/
+
+# Claude CLI
+.claude/
